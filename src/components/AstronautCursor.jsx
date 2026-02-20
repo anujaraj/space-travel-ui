@@ -1,8 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./AstronautCursor.css";
 
 export default function AstronautCursor() {
   const cursorRef = useRef();
+  const [gesture, setGesture] = useState("idle");
+
 
   useEffect(() => {
     if (window.__cursorMounted) return;
@@ -15,8 +17,18 @@ export default function AstronautCursor() {
     };
 
     window.addEventListener("mousemove", move);
+    
+    const down = () => setGesture("click");
+    const up = () => setGesture("idle");
+
+    window.addEventListener("mousemove", move);
+    window.addEventListener("mousedown", down);
+    window.addEventListener("mouseup", up);
+
     return () => {
       window.removeEventListener("mousemove", move);
+      window.removeEventListener("mousedown", down);
+      window.removeEventListener("mouseup", up);
       window.__cursorMounted = false;
     }
 

@@ -147,27 +147,29 @@
     right: 0.5vw;
   }
   .destinationHUD {
-    padding: 2px;
+    padding: 1px;
     width: 55vw;
     height: auto;
     margin: 0 auto;
     left: -4rem;
   }
   .infoCard {
-    width: 30vw;
+    width: 27vw;
     height: auto;
-    font-size: 1.2vw;
-    padding: 4px;
+    font-size: 1.5vw;
+    padding: 2px;
   }
   .confirmBtn{
-    width: 30vw;
+    width: 27vw;
     height: auto;
-    padding: 2px;
-    font-size: 1.2vw;
+    padding: 1.5px;
+    font-size: 1.5vw;
     justify-content: center;
+    margin:1px;
   }
   .backBtn {
     font-size: 1.2vw;
     justify-content: center;
+    padding:1.5px;
   }
 }

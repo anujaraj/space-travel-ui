@@ -1,0 +1,109 @@
+.controlPanel {
+  width: 25%;
+  height: 100%;
+  background: #0f172a;
+  border: 2px solid cyan;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: cyan;
+}
+
+.panelScreen {
+  background: #020617;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+.panelButtons {
+  display: flex;
+   flex-wrap: wrap;  
+  justify-content: center;
+  gap:12px;
+}
+
+.panelButtons button {
+  flex: 1 1 45%;  
+  min-width: 90px; 
+  background: transparent;
+  border: 1px solid cyan;
+  color: cyan;
+  padding: 5px 8px;
+  cursor: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.panelButtons button:hover {
+  background: cyan;
+  color: black;
+  box-shadow: 0 0 10px cyan;
+}
+
+.ledRow {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.led {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: blink 1.2s infinite alternate;
+}
+
+.led.green {
+  background: #00ff88;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+.led.yellow {
+  background: #ffd000;
+  box-shadow: 0 0 10px #ffd000;
+}
+
+.led.red {
+  background: #ff3b3b;
+  box-shadow: 0 0 10px #ff3b3b;
+}
+
+@keyframes blink {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+
+  .controlPanel {
+    width: 30%;
+    height: auto;
+    margin: 20px auto;
+  }
+    .panelScreen, .panelButtons button {
+    font-size: 0.6rem;
+    margin:2px;
+  }
+  
+}
+
+
+@media (max-width: 480px) {
+  .controlPanel {
+    width: 20%;
+    height: auto;
+    margin: 15px auto;
+
+  }
+  .panelScreen,.panelButtons button {
+    font-size: 0.5rem;
+    margin:2px;
+  }
+
+
+}

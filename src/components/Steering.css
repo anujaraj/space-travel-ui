@@ -1,0 +1,50 @@
+.steering {
+  margin-bottom: 40px;
+  padding: 20px 50px;
+  border: 2px solid cyan;
+  color: cyan;
+  cursor: pointer;
+  border-radius: 12px;
+  
+  font-weight: bold;
+  transition: 0.3s ease;
+   box-shadow:
+    0 0 30px cyan,
+    inset 0 0 15px rgba(0,255,255,0.4);
+}
+
+.steering:hover {
+  background: cyan;
+  color: black;
+  transform: scale(1.05);
+}
+
+
+.innerCircle {
+  text-align: center;
+  color: cyan;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid cyan;
+  border-radius: 12px;
+  margin:4px;
+}
+
+@media (max-width: 768px) {
+  .innerCircle {
+    font-size: 0.8rem;
+    margin:3px;
+
+  }
+}
+
+
+@media (max-width: 480px) {
+  .innerCircle {
+    font-size: 0.6rem;
+    margin:2px;
+
+  }
+
+}
+

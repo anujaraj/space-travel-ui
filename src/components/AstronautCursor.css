@@ -1,0 +1,18 @@
+.astronaut-cursor {
+  position: fixed;
+  width: 40px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: translate(-50%, -50%) translateY(-4px);
+  }
+  to {
+    transform: translate(-50%, -50%) translateY(4px);
+  }
+}

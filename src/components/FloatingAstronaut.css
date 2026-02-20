@@ -1,0 +1,21 @@
+.floating-astronaut {
+  position: fixed;
+  right: 60px; /* distance from right edge */
+  top: 50%; /* vertically centered */
+  width: 35%; /* bigger astronaut */
+  pointer-events: none; /* doesn't block clicks */
+  transform: translateY(-50%) scaleX(-1); /* vertical centering + flip horizontally */
+  z-index: 999;
+
+  /* floating animation */
+  animation: float 3s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(-52%) scaleX(-1);
+  }
+  to {
+    transform: translateY(-48%) scaleX(-1);
+  }
+}

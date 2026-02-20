@@ -47,7 +47,7 @@
   border: 1px solid orangered;
   color: orange;
   padding: 8px 15px;
-  cursor: pointer;
+  cursor: none;
   width: fit-content;
   margin:5px;
   border-radius: 5px;
@@ -89,7 +89,7 @@
   background: transparent;
   border: 1px solid orangered;
   color: orange;
-  cursor: pointer;
+  cursor: none;
   letter-spacing: 2px;
   transition: 0.3s;
 }

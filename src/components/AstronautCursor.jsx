@@ -5,6 +5,8 @@ export default function AstronautCursor() {
   const cursorRef = useRef();
 
   useEffect(() => {
+    if (window.__cursorMounted) return;
+  window.__cursorMounted = true;
     const move = (e) => {
       if (cursorRef.current) {
         cursorRef.current.style.left = e.clientX + "px";
@@ -13,7 +15,11 @@ export default function AstronautCursor() {
     };
 
     window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
+    return () => {
+      window.removeEventListener("mousemove", move);
+      window.__cursorMounted = false;
+    }
+
   }, []);
 
   return (
@@ -28,7 +34,7 @@ export default function AstronautCursor() {
         top: "0px",
         width: "40px",
         pointerEvents: "none",
-        transform: "translate(-50%, -50%)",
+        
         zIndex: 999999,
       }}
     />

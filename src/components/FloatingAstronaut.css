@@ -1,13 +1,11 @@
 .floating-astronaut {
   position: fixed;
-  right: 60px; /* distance from right edge */
-  top: 50%; /* vertically centered */
-  width: 35%; /* bigger astronaut */
-  pointer-events: none; /* doesn't block clicks */
-  transform: translateY(-50%) scaleX(-1); /* vertical centering + flip horizontally */
+  right: 30px;
+  top: 50%; 
+  width: 35%;
+  pointer-events: none;
+  transform: translateY(-50%) scaleX(-1); 
   z-index: 999;
-
-  /* floating animation */
   animation: float 3s ease-in-out infinite alternate;
 }
 

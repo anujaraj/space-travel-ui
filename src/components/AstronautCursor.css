@@ -2,17 +2,29 @@
   position: fixed;
   width: 40px;
   pointer-events: none;
-  transform: translate(-50%, -50%);
   z-index: 999999;
-
+  transform: translate(-50%, -50%) scaleX(-1);
   animation: float 2s ease-in-out infinite alternate;
 }
 
 @keyframes float {
   from {
-    transform: translate(-50%, -50%) translateY(-4px);
+    transform: translate(-50%, -50%) translateY(-4px) scaleX(-1);
   }
   to {
-    transform: translate(-50%, -50%) translateY(4px);
+    transform: translate(-50%, -50%) translateY(4px) scaleX(-1);
   }
+}
+
+@media screen and (max-width: 768px) {
+  .astronaut-cursor {
+    width: 20px;
+  }
+  
+}
+@media screen and (max-width: 480px) {
+  .astronaut-cursor {
+    width: 10px;
+  }
+  
 }

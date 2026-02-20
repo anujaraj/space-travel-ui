@@ -4,7 +4,7 @@ import  SpaceScene  from './SpaceScene';
 import ControlPanel from './ControlPanel';
 import SteeringWheel from './SteeringWheel';
 import './Hero.css';
-import AstronautCursor from './AstronautCursor';
+
 
 const Hero = () => {
     const navigate = useNavigate();
@@ -39,7 +39,7 @@ const Hero = () => {
         //     </button>
         // </div>
         <div className="cockpit">
-            <AstronautCursor/>
+   
             <div className="title">COCKPIT AREA</div>
             <div className="frontGlass">
                 <SpaceScene hyperdrive={hyperdrive} />

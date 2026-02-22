@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import StarBackground from './StarBackground';    
 import FloatingAstronaut from "./FloatingAstronaut";
 import MarsSphere from './Mars';
@@ -9,6 +9,7 @@ import './Destination.css';
 const Destination = () => {
     const { id } = useParams();
     const navigate = useNavigate();
+    const [returnback,setReturnBack] = useState(false);
 
     const planetData = {
         name: id.charAt(0).toUpperCase() + id.slice(1),
@@ -18,21 +19,33 @@ const Destination = () => {
         price: "$499,999",
     };
 
+        useEffect(() => {
+            if(returnback){
+                const timer = setTimeout(() => {
+                    navigate('/');
+                }, 1700);
+                return () => clearTimeout(timer);
+            }
+            
+        },[returnback,navigate])
+
     return (
     <div className="destinationPage">
-      <StarBackground  />
+      <StarBackground  returnback={returnback}/>
        <div className="marsCanvas">
         <Canvas camera={{ position: [0, 0, 7] }}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 10]} intensity={1} />
-          <MarsSphere />
+          <MarsSphere returnback={returnback} />
         </Canvas>
       </div>
+
+      
   
-      <FloatingAstronaut />
+      <FloatingAstronaut returnback={returnback}/>
       <div className="destination-content"> 
         <div className="destinationHUD">
-          <button className="backBtn" onClick={() => navigate("/")}>
+          <button className="backBtn" onClick={() => setReturnBack(true)}>
               ← Return to Cockpit
           </button>
           <div className="infoCard">

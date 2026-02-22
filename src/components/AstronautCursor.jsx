@@ -4,6 +4,10 @@ import "./AstronautCursor.css";
 export default function AstronautCursor() {
   const cursorRef = useRef();
   const [gesture, setGesture] = useState("idle");
+  const images = {
+    idle: "/textures/astronaut.png",
+    click: "/textures/astronaut.png",
+  };
 
 
   useEffect(() => {
@@ -15,8 +19,6 @@ export default function AstronautCursor() {
         cursorRef.current.style.top = e.clientY + "px";
       }
     };
-
-    window.addEventListener("mousemove", move);
     
     const down = () => setGesture("click");
     const up = () => setGesture("idle");
@@ -37,7 +39,7 @@ export default function AstronautCursor() {
   return (
     <img
       ref={cursorRef}
-      src="/textures/astronaut.png"
+      src={images[gesture]}
       alt="cursor"
       className="astronaut-cursor"
       style={{
@@ -45,8 +47,7 @@ export default function AstronautCursor() {
         left: "0px",
         top: "0px",
         width: "40px",
-        pointerEvents: "none",
-        
+        pointerEvents: "none",     
         zIndex: 999999,
       }}
     />

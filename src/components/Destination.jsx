@@ -37,21 +37,19 @@ const Destination = () => {
           </button>
           <div className="infoCard">
             <h1>{planetData.name.toUpperCase()}</h1>
-
             <p>{planetData.description}</p>
-
             <div className="stats">
-              <div>
+              <div className="stat">
                 <span>Distance</span>
                 <strong>{planetData.distance}</strong>
               </div>
 
-              <div>
+              <div className="stat" >
                 <span>Travel Time</span>
                 <strong>{planetData.travelTime}</strong>
               </div>
 
-              <div>
+              <div className="stat">
                 <span>Price</span>
                 <strong>{planetData.price}</strong>
               </div>

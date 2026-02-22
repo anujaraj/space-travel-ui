@@ -12,7 +12,7 @@ export default function MarsSphere() {
 
   if (size.width < 1024) radius = 4;
   if (size.width < 768) radius = 3.5;
-  if (size.width < 480) radius = 1.5;
+  if (size.width < 480) radius = 1.2;
 
   useFrame((state, delta) => {
     if (marsRef.current) {

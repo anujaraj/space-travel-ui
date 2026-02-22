@@ -6,10 +6,9 @@ import AstronautCursor from './components/AstronautCursor';
 function App() {
     return (
         <>
-        <AstronautCursor/>
+        
         <Router>
-            
-            
+            <AstronautCursor/>
             <div className="app-container">
                 {/* <nav style={{ padding: '1rem', borderBottom: '1px solid #ccc', display: 'flex', gap: '20px' }}>
                     <Link to="/">Home</Link>

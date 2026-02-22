@@ -88,6 +88,7 @@
   padding: 12px;
   background: transparent;
   border: 1px solid orangered;
+  border-radius: 4px;
   color: orange;
   cursor: none;
   letter-spacing: 2px;
@@ -147,7 +148,7 @@
     right: 0.5vw;
   }
   .destinationHUD {
-    padding: 1px;
+    padding: 2px;
     width: 55vw;
     height: auto;
     margin: 0 auto;
@@ -160,7 +161,7 @@
     padding: 1px;
   }
   .confirmBtn{
-    width: 27vw;
+    width: 26vw;
     height: auto;
     padding: 1.5px;
     font-size: 1.5vw;
@@ -174,6 +175,6 @@
   }
   .stats {
     gap:4px;
-    margin:1px 0;
+    margin:2px 0;
   }
 }

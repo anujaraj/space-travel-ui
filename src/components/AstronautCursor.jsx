@@ -1,13 +1,26 @@
 import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./AstronautCursor.css";
 
 export default function AstronautCursor() {
   const cursorRef = useRef();
+  const location = useLocation();
   const [gesture, setGesture] = useState("idle");
-  const images = {
-    idle: "/textures/astronaut.png",
-    click: "/textures/astronaut.png",
-  };
+   const pageImages = {
+    home: {
+        idle: "/textures/astronaut.png",
+        click: "/textures/astronaut.png",
+      },
+      destination: {
+        idle: "/textures/rocket.png",
+        click: "/textures/rocket.png",
+      },
+    };
+    const currentSet =
+      location.pathname.includes("destination")
+        ? pageImages.destination
+        : pageImages.home;
+
 
 
   useEffect(() => {
@@ -39,7 +52,7 @@ export default function AstronautCursor() {
   return (
     <img
       ref={cursorRef}
-      src={images[gesture]}
+      src={currentSet[gesture]}
       alt="cursor"
       className="astronaut-cursor"
       style={{

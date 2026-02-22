@@ -36,14 +36,14 @@ export default function AstronautCursor() {
     const down = () => setGesture("click");
     const up = () => setGesture("idle");
 
-    window.addEventListener("mousemove", move);
-    window.addEventListener("mousedown", down);
-    window.addEventListener("mouseup", up);
+    window.addEventListener("pointermove", move);
+    window.addEventListener("pointerdown", down);
+    window.addEventListener("pointerup", up);
 
     return () => {
-      window.removeEventListener("mousemove", move);
-      window.removeEventListener("mousedown", down);
-      window.removeEventListener("mouseup", up);
+      window.removeEventListener("pointermove", move);
+      window.removeEventListener("pointerdown", down);
+      window.removeEventListener("pointerup", up);
       window.__cursorMounted = false;
     }
 

@@ -5,15 +5,10 @@ import AstronautCursor from './components/AstronautCursor';
 
 function App() {
     return (
-        <>
-        
+        <>   
         <Router>
             <AstronautCursor/>
             <div className="app-container">
-                {/* <nav style={{ padding: '1rem', borderBottom: '1px solid #ccc', display: 'flex', gap: '20px' }}>
-                    <Link to="/">Home</Link>
-                    <Link to="/destination/mars">Destination: Mars</Link>
-                </nav> */}
                 <Routes>
                     <Route path="/" element={<Hero />} />
                     <Route path="/destination/:id" element={<Destination />} />

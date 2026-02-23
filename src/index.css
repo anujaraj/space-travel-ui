@@ -12,16 +12,8 @@ html, body, #root {
   color: rgba(255, 255, 255, 0.87);
 }
 
-/* Remove body background so pages control their own */
 body {
-  margin: 0;
-  
+  margin: 0;  
   background: black;
   cursor:none;
-}
-
-/* REMOVE this entirely */
-#root {
-  height: 100%;
-  width: 100%;
 }

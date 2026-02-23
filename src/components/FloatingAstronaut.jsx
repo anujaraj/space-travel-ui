@@ -1,5 +1,4 @@
-import { useRef, useState } from "react";
-import { useFrame, useLoader, useThree } from "@react-three/fiber";
+import { useRef } from "react";
 import "./FloatingAstronaut.css";
 
 export default function FloatingAstronaut({returnback}) {

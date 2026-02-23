@@ -5,11 +5,8 @@ export default function SteeringWheel({ onEngage }) {
         <div className="steeringWheel" onClick={onEngage}>
             <div className="innerCircle">
                 ENGAGE DESTINATION :<br/>
-                Book you tickets to MARS
-               
+                Book you tickets to MARS               
             </div>
-            
-
         </div>
     );
 }

@@ -13,8 +13,6 @@ export default function ControlPanel({ side }) {
         <div className="led yellow"></div>
         <div className="led red"></div>
       </div>
-
-
       <div className="panelButtons">
         <button>SCAN</button>
         <button>LOCK TARGET</button>

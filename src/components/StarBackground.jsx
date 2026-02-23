@@ -10,11 +10,10 @@ function RotatingStars({returnback}) {
     if (!ref.current) return;
     let speed =0.05 ;
     if (returnback) {
-      speed = 2;
-      camera.position.x += (Math.random() - 0.5) * 0.02;
-      camera.position.y += (Math.random() - 0.5) * 0.02;
+      speed = 2;      
+      ref.current.rotation.y -= delta * speed;
     }
-    ref.current.rotation.y += delta * speed;
+     else ref.current.rotation.y += delta * speed;
   });
 
   return <Stars ref={ref} radius={100} depth={50} count={4000} factor={4} fade />;

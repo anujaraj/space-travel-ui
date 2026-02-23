@@ -18,11 +18,11 @@ export default function MarsSphere({returnback}) {
     if (!marsRef.current) return;
 
     let speed =  0.05; 
-    if(returnback){
-      speed=3;
-      marsRef.current.rotation.y += 0.1;
+    // if(returnback){
+    //   speed=3;
+    //   marsRef.current.rotation.y += 0.1;
 
-    }
+    // }
     marsRef.current.rotation.y += delta * speed;
   });
 

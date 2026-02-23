@@ -61,7 +61,7 @@ export default function AstronautCursor() {
         top: "0px",
         width: "40px",
         pointerEvents: "none",     
-        zIndex: 999999,
+        zIndex: 99999999,
       }}
     />
   );

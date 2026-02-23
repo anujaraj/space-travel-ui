@@ -163,7 +163,7 @@
   .confirmBtn{
     width: 26vw;
     height: auto;
-    padding: 1.5vw;
+    padding: 1.5px;
     font-size: 1.5vw;
     justify-content: center;
     margin:2px;

@@ -7,22 +7,17 @@ export default function MarsSphere({returnback}) {
   const marsRef = useRef();
   const texture = useLoader(TextureLoader, "/textures/mars4k.jpg");
   const { size } = useThree(); // gives canvas width
-  // Responsive radius logic
+
   let radius = 4;
 
   if (size.width < 1024) radius = 4;
-  if (size.width < 768) radius = 3.5;
+  if (size.width < 768) radius = 3;
   if (size.width < 480) radius = 1.2;
+  if (size.width < 300) radius = 1;
 
   useFrame((state, delta) => {
     if (!marsRef.current) return;
-
     let speed =  0.05; 
-    // if(returnback){
-    //   speed=3;
-    //   marsRef.current.rotation.y += 0.1;
-
-    // }
     marsRef.current.rotation.y += delta * speed;
   });
 
